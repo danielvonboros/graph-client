@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './App.css';
+import { MainView } from "./main-view/main-view";
+
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <MainView />
       </header>
     </div>
   );
