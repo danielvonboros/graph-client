@@ -1,6 +1,7 @@
-import {FetchData} from '../fetch-data/fetch-data';
+import { FetchData } from '../fetch-data/fetch-data';
 import { NavBar } from '../nav-bar/nav-bar';
 import { SearchBar } from '../search-bar/search-bar';
+import { ListView } from '../list-view/list-view';
 
 export function MainView() {
     return (
@@ -8,6 +9,7 @@ export function MainView() {
             <NavBar />
             <FetchData />
             <SearchBar />
+            <ListView />
         </>
     )
 }
