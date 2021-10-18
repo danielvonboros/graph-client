@@ -1,3 +1,5 @@
+import { ListItem } from "../list-item/list-item";
+
 export function ListView(props) {
     
     console.log(props.graphs);
@@ -8,10 +10,7 @@ export function ListView(props) {
 
     return( 
             props.graphs.map(graph => {
-                return (<div key={graph.id}>
-                    <h1>{graph.name}</h1>
-                    
-                        </div>
+                return (<ListItem graph={graph} />
                 )
             })
         )

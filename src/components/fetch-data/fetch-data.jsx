@@ -11,26 +11,19 @@ export function FetchData(props) {
 
     function getAllGraphs() 
     { axios.get('http://localhost:3001/graphs').then(function (response) {
-        setGraphs(graphs);
+        setGraphs(response.data);
     }).catch((error) => console.error(error))}
-
-    function tryGraph(){
-      // eslint-disable-next-line
-        alchemy.begin({"dataSource": graphs})
-    }
  
     useEffect(() => {
-      console.log("use effect");
-      getAllGraphs(); tryGraph();
+      getAllGraphs()
     },  []);
 
-    
+
     return (
         <div>
-            {/* <NavBar graphs={graphs}/>
+            <NavBar graphs={graphs}/>
             <SearchBar graphs={graphs} /> 
-            <ListView graphs={graphs}/> */}
-            <div id="alchemy" className="alchemy"></div>
+            <ListView graphs={graphs}/>
         </div>
     );
 }
