@@ -2,7 +2,7 @@ export function SearchBar() {
     return (
     <>
         <form>
-            <label for="search">
+            <label type="search">
                 Filter:
             </label>
             <input type="text" id="filter">

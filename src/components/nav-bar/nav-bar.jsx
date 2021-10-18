@@ -3,7 +3,9 @@ import "./nav-bar.css";
 export function NavBar() {
     return (
         <div className="navbar">
-            <h2 className="app-title">Graph-Client</h2>
+            <h2 className="left-title">Graph-Client</h2>
+            <div />
+            <h2 className="right-title">Add new +</h2>
         </div>
     )
 }

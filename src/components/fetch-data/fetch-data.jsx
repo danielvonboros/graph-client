@@ -2,21 +2,29 @@ import {useEffect, useState} from "react";
 
 import axios from "axios";
 
-export function FetchData() {
+import { NavBar } from '../nav-bar/nav-bar';
+import { SearchBar } from '../search-bar/search-bar';
+import { ListView } from '../list-view/list-view';
+
+export function FetchData(props) {
     const [graphs, setGraphs] = useState([]);
 
     function getAllGraphs() 
     { axios.get('http://localhost:3001/graphs').then(function (response) {
         setGraphs(response.data)
-    }).catch((error) => console.error(error)).then(console.log(graphs))}
+    }).catch((error) => console.error(error))}
 
     useEffect(() => {getAllGraphs()}, [])
 
-    setTimeout(console.log(graphs), 3000);
-
-    if (graphs === []) {
-        return <div>Loading...</div>
+    if (!graphs) {
+        return <div>Loading ...</div>
     }
 
-    return null;
+    return (
+        <>
+            <NavBar graphs={graphs}/>
+            <SearchBar graphs={graphs} />
+            <ListView graphs={graphs}/>
+        </>
+    );
 }
