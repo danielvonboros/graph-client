@@ -10,8 +10,9 @@ export function ListView(props) {
             props.graphs.map(graph => {
                 return (<div key={graph.id}>
                     <h1>{graph.name}</h1>
+                    
                         </div>
-                )}))
-
+                )
+            })
+        )
 }
-// props.graphs.data.nodes.map(node => {return (<h2>{node.label}</h2>)}) 

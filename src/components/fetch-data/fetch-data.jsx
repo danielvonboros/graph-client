@@ -7,24 +7,30 @@ import { SearchBar } from '../search-bar/search-bar';
 import { ListView } from '../list-view/list-view';
 
 export function FetchData(props) {
-    const [graphs, setGraphs] = useState([]);
+    const [graphs, setGraphs] = useState(undefined);
 
     function getAllGraphs() 
     { axios.get('http://localhost:3001/graphs').then(function (response) {
-        setGraphs(response.data)
+        setGraphs(graphs);
     }).catch((error) => console.error(error))}
 
-    useEffect(() => {getAllGraphs()}, [])
-
-    if (!graphs) {
-        return <div>Loading ...</div>
+    function tryGraph(){
+      // eslint-disable-next-line
+        alchemy.begin({"dataSource": graphs})
     }
+ 
+    useEffect(() => {
+      console.log("use effect");
+      getAllGraphs(); tryGraph();
+    },  []);
 
+    
     return (
-        <>
-            <NavBar graphs={graphs}/>
-            <SearchBar graphs={graphs} />
-            <ListView graphs={graphs}/>
-        </>
+        <div>
+            {/* <NavBar graphs={graphs}/>
+            <SearchBar graphs={graphs} /> 
+            <ListView graphs={graphs}/> */}
+            <div id="alchemy" className="alchemy"></div>
+        </div>
     );
 }
