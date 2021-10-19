@@ -1,0 +1,14 @@
+.search-field {
+  background-color: #1b064c;
+  width: 70%;
+  height: 30px;
+  margin: 20px auto;
+}
+
+.search-filter-wrapper {
+  margin: 0 auto;
+}
+
+.search-label {
+  color: white;
+}

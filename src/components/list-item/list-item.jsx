@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 
 import G6 from '@antv/g6';
 
+import "./list-item.css"
+
 export function ListItem(props){
 
     console.log(props.graph.data, props.id);
@@ -11,14 +13,12 @@ export function ListItem(props){
   
     useEffect(() => {
       if(!graph) {
-        // 实例化 Minimap
         const minimap = new G6.Minimap()
   
-        // 实例化 Graph
         graph = new G6.Graph({
           container: `c+${props.id}`,
-          width: 600,
-          height: 400,
+          width: 400,
+          height: 500,
           plugins: [minimap],
           modes: {
             default: ['drag-canvas', 'zoom-canvas']
@@ -87,7 +87,7 @@ export function ListItem(props){
     }, [])
   
 
-    if (props.data === undefined) {
+    if (props.graph.data === undefined) {
         return <div>Loading ...</div>
     }
 

@@ -1,0 +1,25 @@
+.heading2-light {
+  color: white;
+  text-align: center;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin: 0 15px;
+}
+
+.graph-container {
+  width: 98%;
+  height: 98%;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.graph-container-outer {
+  background-color: #1b064c;
+  border: solid 5px #1b064c;
+  border-radius: 10px;
+}
