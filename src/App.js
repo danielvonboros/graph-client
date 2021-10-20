@@ -1,9 +1,9 @@
-import { MainView } from "./components/main-view/main-view";
+import { AppRouter } from "./components/app-router/app-router";
 
 function App() {
   return (
     <div className="App">
-      <MainView />
+      <AppRouter />
     </div>
   );
 }

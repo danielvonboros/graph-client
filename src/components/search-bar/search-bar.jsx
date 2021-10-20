@@ -4,14 +4,9 @@ export function SearchBar() {
     return (
     <>
         <form className="search-field">
-            <div className="search-filter-wrapper">
-            <label type="search" className="search-label">
-                Filter:
-            </label>
-            <input type="text" id="filter">
+            <input type="text" id="filter" placeholder="Filter results" className="search-filter-wrapper">
 
             </input>
-            </div>
         </form>
     </>
     )

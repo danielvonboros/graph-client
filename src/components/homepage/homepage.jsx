@@ -6,9 +6,7 @@ import { NavBar } from '../nav-bar/nav-bar';
 import { SearchBar } from '../search-bar/search-bar';
 import { ListView } from '../list-view/list-view';
 
-import "./fetch-data.css"
-
-export function FetchData() {
+export function Homepage() {
     const [graphs, setGraphs] = useState(undefined);
 
     function getAllGraphs() 

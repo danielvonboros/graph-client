@@ -1,11 +1,15 @@
 .search-field {
   background-color: #1b064c;
+  border: 5px solid #1b064c;
+  border-radius: 15px;
   width: 70%;
   height: 30px;
   margin: 20px auto;
 }
 
 .search-filter-wrapper {
+  text-align: center;
+  width: 50%;
   margin: 0 auto;
 }
 
