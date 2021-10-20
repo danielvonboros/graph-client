@@ -1,11 +1,12 @@
 import React from 'react';
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Homepage } from '../homepage/homepage';
 import { Graphpage } from '../graphpage/graphpage';
 
-export const AppRouter = () => {
+export function AppRouter(){
+
+return(
         <Router>
             <div className="container">
                 <Switch>
@@ -14,4 +15,6 @@ export const AppRouter = () => {
                 </Switch>
             </div>
         </Router>
+)
+
 }
