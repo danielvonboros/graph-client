@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import { Graphpage } from '../graphpage/graphpage';
 
 import G6 from '@antv/g6';
 
@@ -10,6 +13,11 @@ export function ListItem(props){
 
     const ref = React.useRef(null)
     let graph = null
+
+    function deleteGraph() { 
+      axios.delete(`http://localhost:3001/remove/${props.id}`); 
+      window.location.reload();
+  }
   
     useEffect(() => {
       if(!graph) {
@@ -91,6 +99,9 @@ export function ListItem(props){
         return <div>Loading ...</div>
     }
 
-    return <div ref={ref}></div>
+    return <div>
+            <div ref={ref}></div>
+            <button className="delete-button" onClick={() => deleteGraph()}>DELETE GRAPH</button>
+            </div>
 
   }

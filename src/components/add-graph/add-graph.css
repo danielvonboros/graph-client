@@ -1,0 +1,29 @@
+.new-graph-field {
+  background-color: #f72684;
+  border: 5px solid #f72684;
+  border-radius: 15px;
+  width: 70%;
+  height: 30px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.name-input-field {
+  width: 40%;
+  text-align: center;
+}
+
+.name-input-button {
+  background-color: #f72684;
+  border: solid 0.5px #1b064c;
+  border-radius: 5px;
+  color: #1b064c;
+  margin-left: 20px;
+}
+
+.name-input-button:hover {
+  background-color: #1b064c;
+  color: #f72684;
+  cursor: pointer;
+}
