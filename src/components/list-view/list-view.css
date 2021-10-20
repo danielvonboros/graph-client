@@ -25,3 +25,15 @@
   border-radius: 10px;
   height: 750px;
 }
+
+@media all and (max-width: 1270px) {
+  .list-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .list-container {
+    grid-template-columns: auto;
+  }
+}
